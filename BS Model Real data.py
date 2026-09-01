@@ -9,6 +9,8 @@ r = 0.035
 initial_cash = 10000
 cash = initial_cash
 position = 0
+buy_signals = []
+sell_signals = []
 
 portfolio_value = []
 trade_log = []
@@ -95,7 +97,7 @@ for i in range(len(data)):
 
 
     
-    elif delta < 0.425 and position == 0:
+    elif delta < 0.4 and position == 0:
         position = cash // S
         entry_price = S
         cash -= position*S
